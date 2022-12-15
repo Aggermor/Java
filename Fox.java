@@ -9,6 +9,8 @@ class Fox {
     boolean alive = true;
     boolean attackable = false;
     String canAttack = "Hen";
+    String color = "common brown";
+    String description = "A "+color+" fox.";
   }
 
   public Fox(String color) {
