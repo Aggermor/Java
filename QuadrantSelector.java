@@ -10,10 +10,10 @@ import java.util.Scanner;
 
 class QuadrantSelector {
   public static void main(String[] args) {
-    Scanner point = new Scanner(System.in);
-      System.out.prntln(point); //debug
-    int x;
-    int y;
+    Scanner scan = new Scanner(System.in);
+    int x = scan.nextLine();
+    int y = scan.nextLine();
+    System.out.prntln(x + "," + y); //debug
 
     if (x < 0 && y < 0){
       return 1;
