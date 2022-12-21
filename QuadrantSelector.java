@@ -11,36 +11,25 @@ import java.util.Scanner;
 class QuadrantSelector {
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
-    int x = scan.nextLine();
-    int y = scan.nextLine();
-    System.out.prntln(x + "," + y); //debug
+    int x = Integer.parseInt(scan.nextLine());
+    int y = Integer.parseInt(scan.nextLine());
 
-    if (x < 0 && y < 0){
-      return 1;
+    if (x < 0 && y < 0) {
+      System.out.println("1");
+    } else if (x > 0 && y < 0) {
+      System.out.println("2");
+    } else if (x > 0 && y > 0) {
+      System.out.println("3");
+    } else if (x < 0 && y > 0) {
+      System.out.println("4");
+    } else if (x == 0 || y == 0) {
+      System.out.println("Input cannot be 0.");
+    } else {
+      System.out.println("Input must be an integer and cannot be 0.");
     }
-    else if (x > 0 && y < 0){
-      return 2;
-    }
-    else if (x > 0 && y > 0){
-      return 3;
-    }
-    else if (x < 0 && y > 0){
-      return 4;
-    }
-    else if (x == 0 || y == 0){
-      System.out.prntln("Input cannot be 0.");
-    }
-    else {
-      System.out.prntln("Input must be an integer and cannot be 0.");
-    }
-    
-    /* quadrant numbers
-    +x+y = q1
-    -x+y = q2
-    -x-y = q3
-    +x-y = q4
 
-    Can I use break; or continue; in the if() to save runtime?
-    */
+    /*
+     * Can I use break; or continue; in the if() to save runtime?
+     */
   }
 }
